@@ -47,11 +47,11 @@ For a full list of docs-to-pdf flags, see their [CLI Global Options](https://git
 ## How it works
 At a high level, the scripts in this repo complete the following:
 
-1. Remove markdown that breaks `docs-to-pdf`
-2. Create a local copy of the W&B Docs
-3. Install Docusaurus React App
-4. Use a local host on port `3000` as the staging area where `docs-to-pdf` grabs the docs from and generates PDFs. You can change the port number by updating `PORT` in `make_pdf.sh`
-3. Generates PDF
+1. Create a local copy of the W&B Docs
+2. Install Docusaurus React App
+3. Use a local host on port `3000` as the staging area where `docs-to-pdf` grabs the docs from and generates PDFs
+4. Remove markdown that breaks `docs-to-pdf`
+5. Generates PDF
 
 For the second to last point, this means that, if you click on a URL within the PDF, it will redirect you to a path that starts with `http://localhost:3000/`. In other words, you will not be redirected to a public website. This is done on purpose since the primary users of the W&B docs PDF do not have internet restrictions. 
 
