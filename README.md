@@ -40,7 +40,7 @@ See the official [docs-to-pdf](https://github.com/jean-humann/docs-to-pdf) repo 
 Once you have the decided which docs you want to generate, run the `make_pdf.sh` script:
 
 ```bash
-cd create_doc_pdf
+cd docodile-to-pdf
 bash ./scripts/make_pdf.sh
 ```
 
