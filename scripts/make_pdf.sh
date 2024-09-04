@@ -2,19 +2,11 @@
 
 PORT=3000
 DOC_TYPE="guides"
-initialDocURLs="http://localhost:$PORT/$DOC_TYPE/"
-SCRIPT_DIR="generate_doc_pdf"
-
-# SUBDIR="Desktop/create_doc_pdf"
-# TARGET_PATH="$HOME/$SUBDIR"
-
-# echo $TARGET_PATH
-
-WORKING_DIR=$PWD
-echo $PWD
-
 OUTPUT_DIR="generated_pdf"
 OUTPUT_FILENAME="wb_dev_guide.pdf"
+
+initialDocURLs="http://localhost:$PORT/$DOC_TYPE/"
+WORKING_DIR=$PWD
 OUTPUT_PATH="$WORKING_DIR/$OUTPUT_DIR"
 
 
@@ -67,7 +59,7 @@ yarn start &
 sleep 10 
 
 # Copy processing script to docodile
-cp "$WORKING_DIR/$SCRIPT_DIR/removeTags.js" "$WORKING_DIR/docodile/scripts/"
+cp "$WORKING_DIR/scripts/removeTags.js" "$WORKING_DIR/docodile/scripts/"
 
 # Remove accordian tags because this breaks PDF generator
 node ./scripts/removeTags.js 
